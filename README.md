@@ -33,22 +33,22 @@
   用户名：root
   密码：Zte521
 ## 8.在集采模式下修改光猫sn，mac，识别码# 修改SN前4位（如HWTC）
-### setmac show查看数据
-### setmac 1 2176 XXXX
+  setmac show查看数据
+  setmac 1 2176 XXXX
 
 ### 修改SN后8位
-setmac 1 2177 XXXXXXXX
+  setmac 1 2177 XXXXXXXX
 
 ### 部分地区可能需要修改512/768
-setmac 1 512 XXXXXXXX
-setmac 1 768 XXXXXX
+  setmac 1 512 XXXXXXXX
+  setmac 1 768 XXXXXX
 
 ### 注册ITMS劫持（防止改完又被覆盖）：
-sendcmd 1 DB set PDTCTUSERINFO 0 Status 0
-sendcmd 1 DB set PDTCTUSERINFO 0 Result 1
+  sendcmd 1 DB set PDTCTUSERINFO 0 Status 0
+  sendcmd 1 DB set PDTCTUSERINFO 0 Result 1
 
 ### 确保配置写入闪存
-sendcmd 1 DB save
+  sendcmd 1 DB save
 
 ## 9.修改光猫地区，改完会重启
   cat /etc/init.d/regioncode
@@ -59,3 +59,11 @@ sendcmd 1 DB save
 
 ## 11.进入后删除tr069，创建新建wan连接
   VLAN模式改写，填入VLAN ID, MTU, 输入自己宽带账密，
+
+# 如果感到教程有用，感谢能帮助到你
+  ## 感谢您的赞助
+  
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+  <img src="https://github.com/user-attachments/assets/73bec82a-3bdd-43e2-9c20-a4f3d2567216" alt="图片1" width="250">
+  <img src="https://github.com/user-attachments/assets/e0579808-e933-427b-92f1-9a93e3612487" alt="图片2" width="300">
+</div>
