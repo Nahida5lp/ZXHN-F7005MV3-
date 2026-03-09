@@ -26,36 +26,36 @@
 
 ## 5.连接后打开光猫不断按回车中断启动流程
 ## 6.清空配置文件
-  输入nand erase 0x900000 0x800000
-  这时光猫恢复出厂
-  输入reset重启光猫
+  输入nand erase 0x900000 0x800000  
+  这时光猫恢复出厂  
+  输入reset重启光猫  
 ## 7.打开cmd，输入telnet 192.168.1.1进入光猫后台
-  用户名：root
-  密码：Zte521
+  用户名：root  
+  密码：Zte521  
 ## 8.在集采模式下修改光猫sn，mac，识别码# 修改SN前4位（如HWTC）
-  setmac show查看数据
-  setmac 1 2176 XXXX
+  setmac show查看数据  
+  setmac 1 2176 XXXX  
 
 ### 修改SN后8位
-  setmac 1 2177 XXXXXXXX
+  setmac 1 2177 XXXXXXXX  
 
 ### 部分地区可能需要修改512/768
-  setmac 1 512 XXXXXXXX
-  setmac 1 768 XXXXXX
+  setmac 1 512 XXXXXXXX  
+  setmac 1 768 XXXXXX  
 
 ### 注册ITMS劫持（防止改完又被覆盖）：
-  sendcmd 1 DB set PDTCTUSERINFO 0 Status 0
+  sendcmd 1 DB set PDTCTUSERINFO 0 Status 0  
   sendcmd 1 DB set PDTCTUSERINFO 0 Result 1
 
 ### 确保配置写入闪存
-  sendcmd 1 DB save
+  sendcmd 1 DB save  
 
 ## 9.修改光猫地区，改完会重启
-  cat /etc/init.d/regioncode
+  cat /etc/init.d/regioncode  
 ## 10.浏览器登入光猫后台
-  192.168.1.1
-  用户名：CMCCAdmin
-  密码：aDm8H%MdA
+  192.168.1.1  
+  用户名：CMCCAdmin  
+  密码：aDm8H%MdA  
 
 ## 11.进入后删除tr069，创建新建wan连接
   VLAN模式改写，填入VLAN ID, MTU, 输入自己宽带账密，
