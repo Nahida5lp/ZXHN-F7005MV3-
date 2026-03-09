@@ -57,4 +57,5 @@ sendcmd 1 DB save
   用户名：CMCCAdmin
   密码：aDm8H%MdA
 
-## 11.进入后删除tr069，创建新的wan连接
+## 11.进入后删除tr069，创建新建wan连接
+  VLAN模式改写，填入VLAN ID, MTU, 输入自己宽带账密，
