@@ -25,6 +25,7 @@
 <img width="602" height="543" alt="Image" src="https://github.com/user-attachments/assets/0fe087a2-eac0-4e7a-82d0-5bdca8365255" />
 
 ## 5.连接后打开光猫不断按回车中断启动流程
+  如果没有输出显示，更换TXD（发送数据） RXD（接收数据）位置
 ## 6.清空配置文件
   输入nand erase 0x900000 0x800000  
   这时光猫恢复出厂  
@@ -32,7 +33,9 @@
 ## 7.打开cmd，输入telnet 192.168.1.1进入光猫后台
   用户名：root  
   密码：Zte521  
-## 8.在集采模式下修改光猫sn，mac，识别码# 修改SN前4位（如HWTC）
+## 8.在集采模式下修改光猫sn，mac，识别码
+  返回setmac success表示修改成功
+### 修改SN前4位（如HWTC）
   setmac show查看数据  
   setmac 1 2176 XXXX  
 
