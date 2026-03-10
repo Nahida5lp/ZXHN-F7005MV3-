@@ -64,7 +64,7 @@
   VLAN模式改写，填入VLAN ID, MTU, 输入自己宽带账密，
 
 # 如果感到教程有用，感谢能帮助到你
-  ## 感谢您的赞助
+  感谢您的赞助
   
 <div style="display: flex; gap: 10px; align-items: flex-start;">
   <img src="https://github.com/user-attachments/assets/73bec82a-3bdd-43e2-9c20-a4f3d2567216" alt="图片1" width="250">
