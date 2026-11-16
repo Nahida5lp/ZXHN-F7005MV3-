@@ -1,0 +1,27 @@
+name: publish-apk
+
+on:
+  push:
+    branches: [apk-dist]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create release with APK assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          ls -l dist
+          gh release delete apk-v2.8 --yes --cleanup-tag || true
+          gh release create apk-v2.8 \
+            dist/zte-telnet-offline.apk dist/zte-telnet-online.apk \
+            --title "光猫 Telnet App 2.8" \
+            --notes "安卓 App 2.8：应用内后台下载 APK、SHA-256 校验后调用系统安装器安装。包含离线版与账号版。"
+# publish build 2
