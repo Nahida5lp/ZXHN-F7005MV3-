@@ -24,3 +24,4 @@ jobs:
             dist/zte-telnet-offline.apk dist/zte-telnet-online.apk \
             --title "光猫 Telnet App 2.8" \
             --notes "安卓 App 2.8：应用内后台下载 APK、SHA-256 校验后调用系统安装器安装。包含离线版与账号版。"
+# publish build 2
