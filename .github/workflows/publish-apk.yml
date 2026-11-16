@@ -19,9 +19,8 @@ jobs:
         run: |
           set -e
           ls -l dist
-          gh release delete apk-v2.8 --yes --cleanup-tag || true
-          gh release create apk-v2.8 \
+          gh release delete apk-v2.9 --yes --cleanup-tag || true
+          gh release create apk-v2.9 \
             dist/zte-telnet-offline.apk dist/zte-telnet-online.apk \
-            --title "光猫 Telnet App 2.8" \
-            --notes "安卓 App 2.8：应用内后台下载 APK、SHA-256 校验后调用系统安装器安装。包含离线版与账号版。"
-# publish build 2
+            --title "光猫 Telnet App 2.9" \
+            --notes "安卓 App 2.9：新增旧光猫模式（zteOnu 协议），新型号开启失败时自动改用旧协议重试；保留应用内后台下载、SHA-256 校验与系统安装器安装。包含离线版与账号版。"
